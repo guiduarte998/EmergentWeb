@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Version Checker";
+}
+
+<h2>Version Checker</h2>
+
+<form asp-action="CheckVersionDb" method="post">
+    <div class="form-group">
+        <label for="version">Enter a version number:</label>
+        <input type="text" class="form-control" id="version" name="version" placeholder="e.g., 1.0.0" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Check</button>
+</form>

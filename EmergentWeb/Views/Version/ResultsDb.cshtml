@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Results";
+    var softwareList = Model as List<SoftwareModel>;
+}
+
+<h2>Results</h2>
+
+@if (softwareList != null && softwareList.Count > 0)
+{
+    <ul>
+        @foreach (var software in softwareList)
+        {
+            <li>@software.Name - @software.Version</li>
+        }
+    </ul>
+}
+else if (softwareList != null && softwareList.Count == 0)
+{
+    <p>No software found with a greater version.</p>
+}
+else
+{
+    <p>Invalid version format. Please try again.</p>
+}
